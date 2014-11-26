@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jumblify View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JumblifyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asC-j6-kao">
+                                <rect key="frame" x="100" y="106" width="400" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Input Field"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guv-27-M8U">
+                                <rect key="frame" x="232" y="155" width="138" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Jumblify Button"/>
+                                <state key="normal" title="Tap me to Jumbilify!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumbilifyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIa-gO-uYy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-rg-HoT">
+                                <rect key="frame" x="100" y="209" width="400" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ygN-J3-xdn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="asC-j6-kao" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="0A9-ew-Mvc"/>
+                            <constraint firstAttribute="centerX" secondItem="Guv-27-M8U" secondAttribute="centerX" constant="-0.5" id="Pqi-IH-tTj"/>
+                            <constraint firstItem="EGi-rg-HoT" firstAttribute="top" secondItem="Guv-27-M8U" secondAttribute="bottom" constant="24" id="mBS-wQ-5tx"/>
+                            <constraint firstItem="Guv-27-M8U" firstAttribute="top" secondItem="asC-j6-kao" secondAttribute="bottom" constant="19" id="mcd-ik-02e"/>
+                            <constraint firstAttribute="centerX" secondItem="EGi-rg-HoT" secondAttribute="centerX" id="n6i-Dt-7k5"/>
+                            <constraint firstItem="asC-j6-kao" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="r7E-rz-lFC"/>
+                            <constraint firstAttribute="centerX" secondItem="asC-j6-kao" secondAttribute="centerX" id="wQQ-uS-BQP"/>
+                            <constraint firstItem="EGi-rg-HoT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="yR7-Cw-rYX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="asC-j6-kao" id="PBE-Gc-wmJ"/>
+                        <outlet property="jumbledLabel" destination="EGi-rg-HoT" id="xXY-JQ-RVi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
